@@ -9,15 +9,18 @@
 var canJump = function (nums) {
   let n = nums.length
   if (n == 0) {
-      return true;
+    return true;
   }
   let p = nums[0]
   let i = 1
   for (; p != 0 && i < n; i++) {
-      p--;
-      if (p < nums[i]) {
-          p = nums[i]
-      }
+    //减能量
+    p--;
+    //吃能量
+    if (p < nums[i]) {
+      p = nums[i]
+    }
   }
+  //能到头就win
   return i == n;
 };
