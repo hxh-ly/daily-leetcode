@@ -1,3 +1,7 @@
+/*
+给定一个不含重复数字的数组 nums ，返回其所有可能的全排列 。你可以 按任意顺序 返回答案。
+*/
+
 //固定1个位置 其余位置全排列
 //固定第二个位置 其余位置全排列
 /* var permute = function (nums) {
@@ -10,7 +14,7 @@
   }
   backTracking = function (output, first) {
     if (first == output.length) {
-      res.push([...path])
+      res.push([...output])
       return
     }
     for (let i = first; i < output.length; i++) {
@@ -39,10 +43,21 @@ console.log(findSame(str1, str2));
  */
 /* let aa = [',a','ads']
 console.log(aa.join('')); */
-let aa='asda'
-aa-='a'
-console.log(aa);
-let gg=['z','x']
-let x=gg.sort()
-console.log(x)
 
+
+let aa = [1, 2, 3]
+console.log(aa.slice(0));
+
+
+var back = function (nums, first) {
+  if (nums.length == first) {
+    res.push([...nums])
+    return
+  }
+  for (let i = first; i < nums.length; i++) {
+    swap(nums, first, i)
+    back(nums, first + 1)
+    swap(nums, first, i)
+
+  }
+}
