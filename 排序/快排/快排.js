@@ -21,13 +21,13 @@ function main(arr) {
 
   if (arr == null || arr.length < 2)
     return
-  quickSort(arr, 0, arr.length - 1)
+  quickSort(arr, 0, arr.length - 1) 
   console.log(arr);
 }
 function quickSort(arr, L, R) {
   if (L < R) {
     //随机
-    swap(arr, randomNum(L, R ), R)
+    swap(arr, parseInt(Math.random() * (R - L + 1) + L, 10), R)
     let p = parttition(arr, L, R)
     quickSort(arr, L, p[0] - 1)
     quickSort(arr, p[1] + 1, R)
@@ -48,7 +48,7 @@ function parttition(arr, L, R) {
   swap(arr, more, R)  //交换大于边界和选定的R
   return [less + 1, more]      //[5,5 ] 边界
 }
-let arr = [5,2,3,1,4]
+let arr = [5, 2, 7, 1, 23, 51, 14]
 main(arr);
 
 
