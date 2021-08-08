@@ -19,16 +19,13 @@ function main(arr) {
   } */
 
   //直接给全部的数
+  //构建大根堆
   for(let i=arr.length-1;i>=0;i--){
     heapify(arr,i,arr.length);
   }
-
-
   console.log(arr);
-
   let heapSize = arr.length;
   swap(arr, 0, --heapSize);
-
   //做heapify
   while (heapSize > 0) {   // O(N)
     heapify(arr, 0, heapSize)   //O(logN)

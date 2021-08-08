@@ -19,10 +19,11 @@ var isBalanced = function (root) {
 
 //改造计算深度的递归式, 
 var treeLength = function (root) {
-  if (root == null) return -1;
+  if (root == null) return 0;
   let leftHeight = treeLength(root.left)
   let rightHeight = treeLength(root.right)
   //递归到某一层 就看到 差值过大就停了
+  //当出现－1  往上直接返负1了  
   if (leftHeight == -1 || rightHeight == -1 || Math.abs(leftHeight - rightHeight) > 1) {
     return -1;
   }
