@@ -48,7 +48,9 @@ function parttition(arr, L, R) {
   swap(arr, more, R)  //交换大于边界和选定的R
   return [less + 1, more]      //[5,5 ] 边界
 }
-let arr = [5, 2, 7, 1, 23, 51, 14]
+let arr =["3","6","7","10"]
+//let arr = [5, 2, 7, 1, 23, 51, 14]
+
 main(arr);
 
 

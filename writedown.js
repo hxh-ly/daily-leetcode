@@ -111,4 +111,37 @@ if (remain < 0) {
 
 /* let regg = /[0-9]?/g
 console.log(regg.test('11')); */
-console.log(~~(3 / 2));
+// concat  let b= a.concat() a变b变  b变a不变
+// filter  新数组
+//foreach   放回undefined
+
+var myReverse = function (arr, a, b) {
+  while (a < b) {
+    let temp = arr[a]
+    arr[a] = arr[b]
+    arr[b] = temp
+    a++;
+    b--;
+  }
+  console.log(arr);
+}
+let list = [1, 2, 3, 4, 5]
+//myReverse(list, 0, list.length - 1)
+let flag = 3
+console.log(flag == 3 > 2);
+let eee = [1, 3]
+let myMap = new Map(eee.entries())
+console.log(myMap);
+let sum = 4
+for (let i = 0; i < myMap.size; i++) {
+  myMap.set(i, myMap.get(i) * 100 / 4)
+}
+//console.log(myMap);
+var t2count = function (x) {
+  let le = x.toString(2), count = 0
+  le.split('').forEach(x => { if (x == 1) count++ });
+  console.log(count);
+  return count
+}
+t2count(15)
+console.log(18>>1);
