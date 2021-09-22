@@ -32,5 +32,12 @@ var findLongestWord = function (s, dictionary) {
   console.log(ccc[0]);
   return ccc[0]
 };
-var s = "abce", dictionary = ["abe","abc"]
-findLongestWord(s, dictionary)
+var s = "abce", dictionary = ["abe", "abc"]
+//findLongestWord(s, dictionary)
+//原型上是否有这个对象
+//判断a 和 b 对象的关联关联关系
+console.log(Object.isPrototypeOf(null));
+
+//判断a 和 函数的关系
+//是否有指向这个 null原型链是否有Object.prototype 指向的对象
+console.log(null instanceof Object);
