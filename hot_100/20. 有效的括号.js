@@ -34,10 +34,3 @@ var compare = function (a, b) {
   if (a.charCodeAt() == 125) return b.charCodeAt() == 123
   if (a.charCodeAt() == 41) return b.charCodeAt() == 40
 }
-
-let a = ['dsfa', 'daf']
-let myMap = new Map()
-for (let i in a) {
-  myMap.set(a[i], 1)
-}
-console.log(myMap);
