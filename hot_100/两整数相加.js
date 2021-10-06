@@ -5,6 +5,7 @@
 */
 function getSum(a, b) {
   //不进位加法， 进位加法
+  // 记得要 ( a&b)<<1
   var sum, cur;
   sum = a ^ b;
   cur = (a & b) << 1;
