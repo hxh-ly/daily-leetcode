@@ -44,7 +44,7 @@ function inOrder(head) {
       }
       else {
         //这个出
-        head=Stack.pop()
+        head = Stack.pop()
         console.log(head.element);
         //如果有right  继续重复左边界全入
         //如果没有  Stack里的继续出
@@ -71,4 +71,19 @@ function postOrder(node) {
   for (let i = store.length - 1; i > 0; i--) {
     console.log(store[i]);
   }
+}
+
+function Mynew(fn) {
+  // 判断是不是函数
+  if(typeof fn !=='function') {}
+  //new.target指向构造函数
+  Mynew.target = fn
+  //1
+  var obj = {}
+  //2 
+    obj.__proto__=  Object.create(fn.prototype)
+    //3 4 
+  var res = fn.call(obj, Array.prototype.slice.call(arguments,1))
+  // 5
+  return (typeof res == 'object' && res != null)||typeof res=='function' ? res : obj
 }

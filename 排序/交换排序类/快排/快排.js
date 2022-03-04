@@ -28,12 +28,12 @@ function quickSort(arr, L, R) {
   if (L < R) {
     //随机
     swap(arr, parseInt(Math.random() * (R - L + 1) + L, 10), R)
-    let p = parttition(arr, L, R)
+    let p = partition(arr, L, R)
     quickSort(arr, L, p[0] - 1)
     quickSort(arr, p[1] + 1, R)
   }
 }
-function parttition(arr, L, R) {
+function partition(arr, L, R) {
   let less = L - 1;
   let more = R;
   while (L < more) {  // 自身和 >区左边界撞上停止
@@ -50,8 +50,8 @@ function parttition(arr, L, R) {
 }
 let arr =["3","6","7","10"]
 //let arr = [5, 2, 7, 1, 23, 51, 14]
-
-main(arr);
+var arr111= [33,7,6,8,0, 5, 1, 2, -1, 3]
+main(arr111);
 
 
 //时间O （nlogn）   累加期望

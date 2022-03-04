@@ -21,6 +21,7 @@ var numTrees = function (n) {
   dp[2] = 2;
   for (let i = 3; i <= n; i++) {
     for (let j = 1; j <= i; j++) {
+      // 3 = 以3为头节点的情况 + 以2为头节点的情况 + 以1为头节点的情况
       dp[i] += dp[j - 1] * dp[i - j]
     }
   }

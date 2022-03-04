@@ -8,7 +8,12 @@
 //4.堆结构的heapInsert和heapify操作
 //5.堆结构的增大和减少
 //6.优先级队列，就是堆结构
-const swap = require('../../util')
+const swap = function (arr, a, b) {
+  var temp = arr[a]
+  arr[a] = arr[b]
+  arr[b] = temp
+}
+
 function main(arr) {
   if (arr == null || arr.length < 2) {
     return
